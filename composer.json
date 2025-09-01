@@ -1,0 +1,60 @@
+{
+    "name": "loomkit/installer",
+    "description": "Loom application installer.",
+    "homepage": "https://loomkit.github.io",
+    "license": "MIT",
+    "keywords": [
+        "installer",
+        "loom",
+        "loomkit",
+        "php"
+    ],
+    "authors": [
+        {
+            "name": "Sigui Kessé Emmanuel",
+            "email": "siguici@proton.me",
+            "homepage": "https://siguici.deno.dev"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/loomkit/loom",
+        "issues": "https://github.com/loomkit/loom/issues",
+        "chat": "https://github.com/orgs/loomkit/discussions"
+    },
+    "require": {
+        "php": "^8.3",
+        "illuminate/support": "^12.26",
+        "laravel/installer": "^5.17",
+        "loomkit/core": "self.version",
+        "symfony/console": "^7.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Loom\\Installer\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Loom\\Installer\\Tests\\": "tests/"
+        }
+    },
+    "bin": [
+        "bin/loom"
+    ],
+    "extra": {
+        "branch-alias": {
+            "dev-main": "0.x-dev"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

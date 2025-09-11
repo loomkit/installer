@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Loom\Installer;
+namespace Loom\Installer\Commands;
 
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Composer;
@@ -358,5 +358,11 @@ class NewCommand extends BaseCommand
     {
         return $this->usingStarterKit($input) &&
                str_starts_with($this->getStarterKit($input), 'loomkit/');
+    }
+
+    #[Override]
+    public function defaultBranch(): string
+    {
+        return parent::defaultBranch();
     }
 }
